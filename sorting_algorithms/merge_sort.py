@@ -7,21 +7,18 @@ def merge(x,p,q,r):
     R = x[q:r]
     L.append(float('inf'))
     R.append(float('inf'))
-    i = 0
-    j = 0
+    i = j = 0
     for k in range(p,r):
         print(x)
         if L[i] < R[j]:
             x[k] = L[i]
-            i = i + 1
+            i += 1
         else:
             x[k] = R[j]
-            j = j + 1
+            j += 1
     return(x)
 
 def merge_sort(x,p,r):
-    print(p)
-    print(r)
     if p + 1 < r:
         q = ((p + r) // 2)
         merge_sort(x,p,q)
