@@ -1,6 +1,6 @@
 
 A = [5,3,4,2,1,10,8,15,22,6]
-B = [1,3,4,2,5,6]
+
 # x = array with 2 sorted arrays, from [p,q] and [q+1,r]
 def merge(x,p,q,r):    
     L = x[p:q]
