@@ -21,5 +21,3 @@ def quicksort(x,p,r):
 
 
 print(quicksort(A,0,len(A)))
-print(len(A))
-print(A)
