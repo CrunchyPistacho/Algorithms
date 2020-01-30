@@ -28,3 +28,45 @@ class Queue:
         else:
             self.__head +=1
             return(self.__queue[self.__head -1])
+
+
+    def __len__(self):
+        return(self.__tail - self.__head)
+
+
+    def __getitem__(self, index):
+        if(self.__head <= (index + self.__head) < self.__tail):
+            return(self.__queue[index + self.__head])
+        else:
+            raise IndexError("Index out of range")        
+
+    def __next__(self):
+        self.__i += 1
+        if self.__i < len(self):
+            return self.__getitem__(self.__i)
+        else:
+            raise StopIteration("Nothing queued")
+
+    def __iter__(self):
+        self.__i = -1
+        return(self)
+
+
+
+if __name__ == '__main__':
+
+    print("Created Queue of size 5")
+    Q1 = Queue(15)
+    print("EnQueue (Insert) 2")
+    Q1.enqueue(2)
+    print("EnQueue 4")
+    Q1.enqueue(4)
+    print("Print Queue")
+  
+    for i in Q1:
+        print(i, end=", ")
+
+    print("Deleted element = ", Q1.dequeue())
+    print("Deleted element = ", Q1.dequeue())
+    print("Queue empty")
+    print("Deleted element = ", Q1.dequeue())	
