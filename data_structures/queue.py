@@ -45,7 +45,7 @@ class Queue:
         if self.__i < len(self):
             return self.__getitem__(self.__i)
         else:
-            raise StopIteration("Nothing queued")
+            raise StopIteration("Nothing Queued")
 
     def __iter__(self):
         self.__i = -1
