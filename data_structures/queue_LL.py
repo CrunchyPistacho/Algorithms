@@ -14,7 +14,7 @@ class Queue_LL:
         self.__len = 0
         self.__i = None
 
-    def isEmpty(self):
+    def is_empty(self):
         if self.__len == 0:
             return(True)
 
